@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Santiniketan Mess</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="select_member_prompt">Select a member</string>
+
+    <string name="default_web_client_id">YOUR_FIREBASE_WEB_CLIENT_ID</string>
+    <string name="save_deposit">Save Deposit</string>
+    <string name="enter_deposit_amount">Enter Deposit Amount</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="education">Education</string>
+</resources>

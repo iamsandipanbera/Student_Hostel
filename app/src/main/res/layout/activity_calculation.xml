@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Meal Rate -->
+    <TextView
+        android:id="@+id/textViewMealRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meal Rate"
+        android:textSize="18sp" />
+
+    <!-- Establishment Charge -->
+    <TextView
+        android:id="@+id/textViewEstablishmentCharge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Establishment Charge"
+        android:textSize="18sp" />
+</LinearLayout>

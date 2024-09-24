@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewDepositHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Deposit History"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:paddingBottom="10dp" />
+
+    <TextView
+        android:id="@+id/textViewFinalTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Final Total: ₹0"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:paddingTop="10dp" />
+</LinearLayout>

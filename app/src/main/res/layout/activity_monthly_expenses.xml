@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Total Marketing -->
+    <EditText
+        android:id="@+id/editTextTotalMarketing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Total Marketing"
+        android:minHeight="48dp" />
+
+    <!-- Rice -->
+    <EditText
+        android:id="@+id/editTextRice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Rice"
+        android:minHeight="48dp" />
+
+    <!-- Gas -->
+    <EditText
+        android:id="@+id/editTextGas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Gas"
+        android:minHeight="48dp" />
+
+    <!-- Guest Meal -->
+    <EditText
+        android:id="@+id/editTextGuestMeal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Guest Meal"
+        android:minHeight="48dp" />
+
+    <!-- Cook Charge -->
+    <EditText
+        android:id="@+id/editTextCookCharge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cook Service Charge"
+        android:minHeight="48dp" />
+
+    <!-- Paper Bills -->
+    <EditText
+        android:id="@+id/editTextPaper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Paper Bills"
+        android:minHeight="48dp" />
+
+    <!-- Other Expenses -->
+    <EditText
+        android:id="@+id/editTextOthers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Other Expenses"
+        android:minHeight="48dp" />
+
+    <!-- Next Button -->
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next" />
+</LinearLayout>

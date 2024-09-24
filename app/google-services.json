@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "93153115790",
+    "project_id": "santiniketan-mess",
+    "storage_bucket": "santiniketan-mess.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:93153115790:android:2fd35fd2d10bf1fea713df",
+        "android_client_info": {
+          "package_name": "com.devsan.santiniketanmess"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "93153115790-h1hfhj5fmpsl195djfalees4ht312aa1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.devsan.santiniketanmess",
+            "certificate_hash": "a3fa0e95d768d5d0869522ec63a8a4f1ac9c7e27"
+          }
+        },
+        {
+          "client_id": "93153115790-5g159md88mbef0j8fiio1bgma0nf22ec.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5JRhUqjyqABbiQI5JVLp2sFAPL8MzIZ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "93153115790-5g159md88mbef0j8fiio1bgma0nf22ec.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

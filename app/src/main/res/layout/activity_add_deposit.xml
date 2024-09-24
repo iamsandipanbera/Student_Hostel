@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Deposit Amount Input Field -->
+    <EditText
+        android:id="@+id/editTextDepositAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_deposit_amount"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp" />
+
+    <!-- Member Selection Spinner -->
+    <Spinner
+        android:id="@+id/spinnerMember"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:minHeight="48dp"
+        android:prompt="@string/select_member_prompt" />
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/buttonSaveDeposit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save_deposit"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp" />
+</LinearLayout>
