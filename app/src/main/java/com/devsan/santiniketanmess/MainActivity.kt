@@ -6,6 +6,7 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
+import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -38,11 +39,29 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Button initialization
-        val signInButton: Button = findViewById(R.id.signInButton)
-        signInButton.setOnClickListener {
-            signIn()
+        val messButton: Button = findViewById(R.id.messButton)
+        val membersButton: Button = findViewById(R.id.membersButton)
+
+        messButton.setOnClickListener {
+            // Navigate to MessActivity (replace with actual class name)
+            startActivity(Intent(this, MessActivity::class.java))
         }
+
+        membersButton.setOnClickListener {
+            // Navigate to MembersListActivity
+            startActivity(Intent(this, MembersListActivity::class.java))
+        }
+
+        // Initialize Firebase Auth and SharedPreferences
+        auth = FirebaseAuth.getInstance()
+        sharedPreferences = getSharedPreferences("UserPreferences", Context.MODE_PRIVATE)
+
+//        val currentUser = auth.currentUser
+//        if (currentUser != null) {
+//            // Hide the sign-in button if the user is already signed in
+//            val signInButton: Button = findViewById(R.id.signInButton)
+//            signInButton.visibility = View.GONE
+//        }
 
         // Set up Toolbar
         val toolbar: Toolbar = findViewById(R.id.toolbar)
@@ -61,20 +80,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
-        // Initialize Firebase Auth and SharedPreferences
-        auth = FirebaseAuth.getInstance()
-        sharedPreferences = getSharedPreferences("UserPreferences", Context.MODE_PRIVATE)
+        configureGoogleSignIn()
 
-        val isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false)
-        if (!isLoggedIn) {
-            configureGoogleSignIn()
-        }
-
-        // Logout button (if added in the layout)
-      //  val logoutButton: Button = findViewById(R.id.logoutButton)
-      //  logoutButton.setOnClickListener {
-       //     logout()
-       // }
     }
 
     private fun configureGoogleSignIn() {
@@ -85,8 +92,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         googleSignInClient = GoogleSignIn.getClient(this, gso)
 
-        // Example Button for Google Sign-In (Replace with actual button in your layout)
-        findViewById<Button>(R.id.signInButton).setOnClickListener {
+        // Sign-In Button: Check layout for existence before setting click listener
+        findViewById<Button>(R.id.signInButton)?.setOnClickListener {
             signIn()
         }
     }
@@ -96,12 +103,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         startActivityForResult(signInIntent, RC_SIGN_IN)
     }
 
-    private fun setupLogoutButton() {
-        val logoutButton: Button = findViewById(R.id.logoutButton) // Make sure the ID is correct
-        logoutButton.setOnClickListener {
-            logout()
-        }
-    }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -113,7 +114,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 Log.d(TAG, "firebaseAuthWithGoogle: ${account.id}")
                 firebaseAuthWithGoogle(account)
             } catch (e: ApiException) {
-                Log.w(TAG, "Google sign in failed", e)
+                Log.w(TAG, "Google sign-in failed", e)
                 Toast.makeText(this, "Google Sign-In failed.", Toast.LENGTH_SHORT).show()
             }
         }
@@ -162,13 +163,15 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 startActivity(intent)
             }
             R.id.nav_view_members -> {
-                // Handle View Members action
+                val intent = Intent(this, MembersListActivity::class.java)
+                startActivity(intent)
             }
             R.id.nav_mess -> {
                 // Handle Mess action
             }
             R.id.nav_developer -> {
-                // Handle Developer Info action
+                val intent = Intent(this, Developer::class.java)
+                startActivity(intent)
             }
             R.id.nav_about -> {
                 // Handle About action

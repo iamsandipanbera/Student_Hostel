@@ -45,7 +45,8 @@ class FirestoreRepository {
 
     // Get member's deposit history
     suspend fun getMemberDepositHistory(memberId: String): List<Double> {
-        val result = db.collection("members").document(memberId).collection("deposits").get().await()
+        val result =
+            db.collection("members").document(memberId).collection("deposits").get().await()
         return result.documents.map { it.getDouble("amount") ?: 0.0 }
     }
 }

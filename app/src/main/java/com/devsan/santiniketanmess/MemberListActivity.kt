@@ -1,6 +1,8 @@
 package com.devsan.santiniketanmess
 
+import MembersAdapter
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -20,6 +22,8 @@ class MembersListActivity : AppCompatActivity() {
 
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
+
+        // Initialize adapter with an empty list
         membersAdapter = MembersAdapter(membersList)
         recyclerView.adapter = membersAdapter
 
@@ -36,11 +40,12 @@ class MembersListActivity : AppCompatActivity() {
                         membersList.add(member)
                     }
                 }
-                membersAdapter.notifyDataSetChanged()
+                membersAdapter.notifyDataSetChanged() // Notify the adapter that the data has changed
             }
 
             override fun onCancelled(error: DatabaseError) {
                 // Handle error
+                Toast.makeText(this@MembersListActivity, "Failed to load members", Toast.LENGTH_SHORT).show()
             }
         })
     }

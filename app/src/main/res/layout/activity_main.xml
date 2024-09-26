@@ -20,28 +20,39 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <!-- Main content goes here -->
-        <FrameLayout
-            android:id="@+id/content_frame"
+        <!-- Linear layout for MESS and MEMBERS buttons -->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- MESS Button -->
+            <Button
+                android:id="@+id/messButton"
+                android:layout_width="match_parent"
+                android:layout_height="298dp"
+                android:layout_margin="16dp"
+                android:layout_weight="0.5"
+                android:background="#D7D7D7"
+                android:text="MESS"
+                android:textColorLink="#000000"
+                tools:ignore="TextContrastCheck" />
+
+            <!-- MEMBERS Button -->
+        </LinearLayout>
 
         <Button
-            android:id="@+id/signInButton"
-            android:layout_width="wrap_content"
+            android:id="@+id/membersButton"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sign In" />
+            android:layout_margin="16dp"
+            android:layout_weight="0.5"
+            android:background="#D7D7D7"
+            android:text="MEMBERS"
+            android:textColorLink="#000000"
+            tools:ignore="TextContrastCheck" />
 
-
-        <!-- Logout button placed inside the main content -->
-        <Button
-            android:id="@+id/logoutButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Log Out"
-            android:layout_gravity="center"
-            android:layout_margin="16dp" />
     </LinearLayout>
 
     <!-- Navigation drawer layout -->

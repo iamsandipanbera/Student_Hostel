@@ -8,18 +8,22 @@
     android:background="@drawable/nav_header_background">
 
     <ImageView
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:src="@drawable/ic_profile_placeholder"
-        android:contentDescription="Profile Image"
-        android:layout_gravity="center_horizontal" />
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Santiniketan Mess"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@android:color/white"
-        android:layout_marginTop="8dp" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:contentDescription="@string/santiniketan_mess_logo"
+        android:src="@drawable/ic_mess_logo" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:letterSpacing="0.2"
+        android:text="@string/santiniketan_mess"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
 </LinearLayout>

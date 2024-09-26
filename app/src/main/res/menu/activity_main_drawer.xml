@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_mess"
+        android:title="Home"
+        android:icon="@drawable/ic_mess" />
+
     <item
         android:id="@+id/nav_add_member"
         android:title="Add Member"
@@ -10,10 +16,6 @@
         android:title="View Members"
         android:icon="@drawable/ic_view_members" />
 
-    <item
-        android:id="@+id/nav_mess"
-        android:title="Mess"
-        android:icon="@drawable/ic_mess" />
 
     <item
         android:id="@+id/nav_developer"

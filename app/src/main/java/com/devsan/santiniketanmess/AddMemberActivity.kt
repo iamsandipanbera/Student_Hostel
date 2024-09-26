@@ -76,21 +76,24 @@ class AddMemberActivity : AppCompatActivity() {
         }
     }
 
-    // Upload image to Firebase Storage and save member details to Realtime Database and Firestore
-    private fun uploadImageToFirebase(memberId: String, name: String, phone: String, education: String) {
-        val ref = storage.reference.child("profile_images/$memberId")
-        profileImageUri?.let { uri ->
-            ref.putFile(uri)
-                .addOnSuccessListener {
-                    ref.downloadUrl.addOnSuccessListener { downloadUri ->
-                        saveMemberToDatabase(memberId, name, phone, education, downloadUri.toString())
-                    }
+    // Handle image upload failure
+private fun handleImageUploadFailure() {
+    Toast.makeText(this, "Image upload failed", Toast.LENGTH_SHORT).show()
+}
+
+// Upload image to Firebase Storage and save member details to Realtime Database and Firestore
+private fun uploadImageToFirebase(memberId: String, name: String, phone: String, education: String) {
+    val ref = storage.reference.child("profile_images/$memberId")
+    profileImageUri?.let { uri ->
+        ref.putFile(uri)
+            .addOnSuccessListener {
+                ref.downloadUrl.addOnSuccessListener { downloadUri ->
+                    saveMemberToDatabase(memberId, name, phone, education, downloadUri.toString())
                 }
-                .addOnFailureListener {
-                    Toast.makeText(this, "Image upload failed", Toast.LENGTH_SHORT).show()
-                }
-        }
+            }
+            .addOnFailureListener { handleImageUploadFailure() }
     }
+}
 
     // Save member details to Firebase Realtime Database and Firestore
     private fun saveMemberToDatabase(memberId: String, name: String, phone: String, education: String, profileImageUrl: String) {
