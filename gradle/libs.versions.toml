@@ -25,6 +25,7 @@ picasso = "2.71828"
 picassoVersion = "2.8"
 playServicesAuth = "21.2.0"
 retrofit = "2.9.0"
+firebaseAppcheckPlayintegrity = "18.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -40,6 +41,7 @@ firebase-firestore = { module = "com.google.firebase:firebase-firestore" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "compiler" }
 google-cloud-datastore = { module = "com.google.cloud:google-cloud-datastore" }
 google-firebase-auth = { module = "com.google.firebase:firebase-auth" }
+google-firebase-firestore = { module = "com.google.firebase:firebase-firestore" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -58,6 +60,7 @@ picasso = { module = "com.squareup.picasso:picasso", version.ref = "picasso" }
 picasso-v28 = { module = "com.squareup.picasso:picasso", version.ref = "picassoVersion" }
 play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+firebase-appcheck-playintegrity = { group = "com.google.firebase", name = "firebase-appcheck-playintegrity", version.ref = "firebaseAppcheckPlayintegrity" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

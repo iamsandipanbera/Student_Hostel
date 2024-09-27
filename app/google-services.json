@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "93153115790",
+    "firebase_url": "https://santiniketan-mess-default-rtdb.firebaseio.com",
     "project_id": "santiniketan-mess",
     "storage_bucket": "santiniketan-mess.appspot.com"
   },
@@ -28,7 +29,7 @@
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB5JRhUqjyqABbiAI5JVLp2sFAPL8MzIZ4"
+          "current_key": "AIzaSyB5JRhUqjyqABbiQI5JVLp2sFAPL8MzIZ4"
         }
       ],
       "services": {

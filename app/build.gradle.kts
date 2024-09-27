@@ -51,7 +51,7 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
     // Choose one: Glide or Picasso
-    implementation(libs.glide)
+    //implementation(libs.glide)
     // annotationProcessor(libs.compiler) // Only if needed for Glide
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.firestore.ktx)
@@ -61,9 +61,11 @@ dependencies {
     implementation(libs.play.services.auth)
     implementation(libs.firebase.analytics)
     implementation(libs.retrofit)
+    implementation(libs.firebase.appcheck.playintegrity)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.retrofit)
     implementation(libs.picasso.v28)
+    implementation(platform("com.google.firebase:firebase-bom:33.3.0"))
 }

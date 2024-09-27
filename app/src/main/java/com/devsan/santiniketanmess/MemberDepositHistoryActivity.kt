@@ -29,7 +29,7 @@ class MemberDepositHistoryActivity : AppCompatActivity() {
         // Initialize Firestore and views
         db = FirebaseFirestore.getInstance()
         memberNameTextView = findViewById(R.id.memberNameTextView)
-        depositHistoryRecyclerView = findViewById(R.id.depositHistoryListView) // Change ListView to RecyclerView
+        depositHistoryRecyclerView = findViewById(R.id.depositHistoryRecyclerView) // Change ListView to RecyclerView
         totalDepositTextView = findViewById(R.id.totalDepositTextView)
 
         // Initialize RecyclerView

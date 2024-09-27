@@ -32,7 +32,6 @@
             android:label="@string/app_name"
             android:theme="@style/Theme.SantiniketanMess.NoActionBar" />
 
-        <activity android:name=".HomeActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".AddDepositActivity" />
         <activity android:name=".AddMemberActivity" />
